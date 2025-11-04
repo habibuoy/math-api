@@ -12,7 +12,7 @@ const MathBasic = {
 
     return a + b;
   },
-  substract: function substract(...args) {
+  subtract: function subtract(...args) {
     if (args.length !== 2) {
       throw new Error('Only accepts exactly two parameters');
     }

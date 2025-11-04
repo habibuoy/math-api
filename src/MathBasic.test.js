@@ -1,13 +1,13 @@
 const MathBasic = require('./MathBasic');
 
 describe('A math basic', () => {
-  it('should constains add, substract, multiply, and divide function', () => {
+  it('should constains add, subtract, multiply, and divide function', () => {
     expect(MathBasic).toHaveProperty('add');
-    expect(MathBasic).toHaveProperty('substract');
+    expect(MathBasic).toHaveProperty('subtract');
     expect(MathBasic).toHaveProperty('multiply');
     expect(MathBasic).toHaveProperty('divide');
     expect(MathBasic.add).toBeInstanceOf(Function);
-    expect(MathBasic.substract).toBeInstanceOf(Function);
+    expect(MathBasic.subtract).toBeInstanceOf(Function);
     expect(MathBasic.multiply).toBeInstanceOf(Function);
     expect(MathBasic.divide).toBeInstanceOf(Function);
   });
@@ -34,24 +34,24 @@ describe('An add function', () => {
   });
 });
 
-describe('A substract function', () => {
+describe('A subtract function', () => {
   it('should throw error when not given 2 parameters', () => {
-    expect(() => MathBasic.substract()).toThrow();
-    expect(() => MathBasic.substract(1)).toThrow();
-    expect(() => MathBasic.substract(1, 2, 3)).toThrow();
-    expect(() => MathBasic.substract(1, 2, 3, 4)).toThrow();
+    expect(() => MathBasic.subtract()).toThrow();
+    expect(() => MathBasic.subtract(1)).toThrow();
+    expect(() => MathBasic.subtract(1, 2, 3)).toThrow();
+    expect(() => MathBasic.subtract(1, 2, 3, 4)).toThrow();
   });
 
   it('should throw error when give non-number parameters', () => {
-    expect(() => MathBasic.substract('1', '2')).toThrow();
-    expect(() => MathBasic.substract(true, {})).toThrow();
-    expect(() => MathBasic.substract(null, false)).toThrow();
+    expect(() => MathBasic.subtract('1', '2')).toThrow();
+    expect(() => MathBasic.subtract(true, {})).toThrow();
+    expect(() => MathBasic.subtract(null, false)).toThrow();
   });
 
   it('should return a - b when given two number parameters', () => {
-    expect(MathBasic.substract(1, 2)).toEqual(-1);
-    expect(MathBasic.substract(5, 5)).toEqual(0);
-    expect(MathBasic.substract(0, 0)).toEqual(0);
+    expect(MathBasic.subtract(1, 2)).toEqual(-1);
+    expect(MathBasic.subtract(5, 5)).toEqual(0);
+    expect(MathBasic.subtract(0, 0)).toEqual(0);
   });
 });
 
